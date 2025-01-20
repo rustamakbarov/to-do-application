@@ -1,5 +1,9 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+Projeyi çalıştıra bilmek için .env dosyasını oluştrup içine aşağıdaki bağlantıyı yazmanız gerekiyor:
+
+DATABASE_URL = 'mongodb+srv://test:test123@cluster0.14tik.mongodb.net/<to-do-list>?retryWrites=true&w=majority'
+
 ## Getting Started
 
 First, run the development server:
