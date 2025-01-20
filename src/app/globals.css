@@ -1,42 +1,123 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-html,
 body {
+  height: 100vh;
   max-width: 100vw;
-  overflow-x: hidden;
+  font-family: sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.home-container {
+  padding: 12px 24px;
+  border: 1px #000 solid;
+  border-radius: 5px;
 }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
+form.sign {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+form.sign span {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+form.sign label {
+  font-weight: 600;
+}
+
+input {
+  padding: 6px;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+form.sign button {
+  background-color: blue;
+  border: none;
+  color: #fff;
+  padding: 12px 24px;
+  cursor: pointer;
+}
+
+form.add-new-task-form {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.empty-list {
+  color: grey;
+  text-align: center;
+}
+
+button.add-new-task {
+  background-color: aquamarine;
+  border: none;
+  border-radius: 5px;
+  padding: 12px 24px;
+  cursor: pointer;
+}
+
+.tasks-list {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.task-list-item {
+  padding: 8px 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.task-list-item p {
   margin: 0;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+svg {
+  cursor: pointer;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+svg.bi-trash3-fill:hover {
+  color: red !important;
+}
+
+svg.bi-pencil-square:hover {
+  color: green !important;
+}
+
+.update-form-container {
+  height: 100vh;
+  max-width: 100vw;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(10px);
+  z-index: 10000;
+}
+
+.update-form-container form {
+  position: relative;
+  padding: 12px 24px;
+  background-color: #fff;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.update-form-container form button.close-button {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  cursor: pointer;
 }
